@@ -4,20 +4,23 @@ import Start from "./Methodts/startClock/startClock.js"
 import Stop from "./Methodts/stopClock/stopClock.js"
 import Reset from "./Methodts/resetClock/resetClock.js"
 
-
 import style from "./Modules/styles.module.css"
-import INITIAL_TIME from "./Constants/Cosntants.js"
+import INITIAL_TIME from "./CONST/Cosntants.js"
 
 export default function ClockVue() {
-
   const [currentTime, setCurrentTime] = useState(INITIAL_TIME)
   const [intervalId, setIntervalId] = useState(null)
   const [pauseTime, setPauseTime] = useState(null)
-
+  const [totalTime, setTotalTime] = useState(null)
 
   const onDoubleClick = () => {
-    setPauseTime(currentTime);
-    clearInterval(intervalId);
+    setPauseTime(currentTime)
+    clearInterval(intervalId)
+    setIntervalId(null)
+    let timesLeft = (currentTime.hours + currentTime.mins + currentTime.secs) * 1000
+    let pauseTime = Date.now()
+    let getTotalTime = timesLeft + pauseTime
+    setTotalTime(getTotalTime)
   }
 
   return (
@@ -31,13 +34,13 @@ export default function ClockVue() {
         </div>
       </div>
       <div className="container__buttons">
-        <button type="button" onClick={() => Start(setIntervalId,setCurrentTime)} disabled={intervalId}>
+        <button type="button" onClick={() => Start(setIntervalId, setCurrentTime, totalTime, setTotalTime)} disabled={intervalId}>
           Start time
         </button>
-        <button type="button" onClick={() => Stop(intervalId,setIntervalId,setCurrentTime)}>
+        <button type="button" onClick={() => Stop(intervalId, setIntervalId, setCurrentTime)}>
           Stop time
         </button>
-        <button type="button" onClick={() => Reset(intervalId,setCurrentTime,setIntervalId)}>
+        <button type="button" onClick={() => Reset(intervalId, setCurrentTime, setIntervalId)}>
           Reset time
         </button>
       </div>

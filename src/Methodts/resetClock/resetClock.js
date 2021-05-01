@@ -1,4 +1,4 @@
-import INITIAL_TIME from "../../Constants/Cosntants.js";
+import INITIAL_TIME from "../../CONST/Cosntants.js";
 import start from "../startClock/startClock.js"
 
 const resetClock = (intervalId,setCurrentTime,setIntervalId) => {

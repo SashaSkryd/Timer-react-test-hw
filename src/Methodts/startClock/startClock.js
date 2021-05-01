@@ -1,14 +1,23 @@
 import UpdateClock from "../updateClock/updateClock.js"
 
-const startClock = (setIntervalId, setCurrentTime) => {
-  const startTime = Date.now();
+const startClock = (setIntervalId, setCurrentTime, totalTime, setTotalTime) => {
+  const startTime = Date.now()
   setIntervalId(
     setInterval(() => {
-    const currentTime = Date.now();
-    const time = currentTime - startTime;
-    UpdateClock(time, setCurrentTime);
-    }, 1000))
+      const currentTime = Date.now()
+      let time = null
+      // if (totalTime === null) {
+      time = currentTime - startTime
 
+      // }  else {
+      // setTotalTime(null);
+      // time = (currentTime - totalTime)+(currentTime - startTime) ;
+
+      // };
+
+      UpdateClock(setCurrentTime, time)
+    }, 1000)
+  )
 }
 
-export default startClock;
+export default startClock
