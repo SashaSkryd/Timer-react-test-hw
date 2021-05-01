@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Timer-react-test-hw/static/css/main.39792193.chunk.css",
+    "main.js": "/Timer-react-test-hw/static/js/main.6d3de1f8.chunk.js",
+    "main.js.map": "/Timer-react-test-hw/static/js/main.6d3de1f8.chunk.js.map",
+    "runtime-main.js": "/Timer-react-test-hw/static/js/runtime-main.f0894fe7.js",
+    "runtime-main.js.map": "/Timer-react-test-hw/static/js/runtime-main.f0894fe7.js.map",
+    "static/js/2.69f3335f.chunk.js": "/Timer-react-test-hw/static/js/2.69f3335f.chunk.js",
+    "static/js/2.69f3335f.chunk.js.map": "/Timer-react-test-hw/static/js/2.69f3335f.chunk.js.map",
+    "index.html": "/Timer-react-test-hw/index.html",
+    "static/css/main.39792193.chunk.css.map": "/Timer-react-test-hw/static/css/main.39792193.chunk.css.map",
+    "static/js/2.69f3335f.chunk.js.LICENSE.txt": "/Timer-react-test-hw/static/js/2.69f3335f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0894fe7.js",
+    "static/js/2.69f3335f.chunk.js",
+    "static/css/main.39792193.chunk.css",
+    "static/js/main.6d3de1f8.chunk.js"
+  ]
+}
